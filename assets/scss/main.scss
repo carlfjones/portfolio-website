@@ -1,0 +1,54 @@
+@import "_variables.scss";
+
+body {
+    font-family: 'Jost', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.page_wrapper {
+
+    header {
+        width: 100vw;
+        height: 100vh;
+        // background: $dark;
+        background: linear-gradient(to top left, $primary 50%, $dark 50%);
+
+        .logo {
+            width: 100px;
+            padding: 15px;
+        }
+
+        .title {
+            text-transform: uppercase;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: $primary;
+            font-size: 73px;
+            font-weight: 900;
+
+            .left {
+                font-weight: 100;
+                transform: translateX(15%);
+            }
+            .right {
+                color: $dark;
+                transform: translateX(50%);
+            }
+
+            .sub_title {
+                width: 100vw;
+                position: absolute;
+                left: 50%;
+                top: 100%;
+                color: $light;
+                font-size: 25px;
+                font-weight: 300;
+
+
+            }
+        }
+    }
+}
