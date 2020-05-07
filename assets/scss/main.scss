@@ -49,9 +49,39 @@ body {
         font-size: 60px;
         font-weight: 900;
     }
+
+    .subtitle {
+        font-size: 15px;
+        font-weight: 300;
+
+        &.dark {
+            align-self: flex-start;
+        }
+        &.primary {
+            align-self: flex-end;
+        }
+    }
 }
 
 .navbar {
     grid-column: 1/4;
     grid-row: 3/4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .navbar__link {
+        margin: 0px 15px 30px;
+        color: $light;
+        font-weight: 300;
+        text-decoration: none;
+
+        &:hover {
+            color: $primary;
+            border-bottom: 2px solid $primary;
+
+        }
+
+    }
 }
