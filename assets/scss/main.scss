@@ -1,54 +1,35 @@
-@import "_variables.scss";
+@import '_variables.scss';
 
 body {
-    font-family: 'Jost', sans-serif;
     margin: 0;
     padding: 0;
+    font-family: 'Jost', sans-serif;
 }
 
-.page_wrapper {
+.header {
+    height: 100vh;
+    width: 100vw;
 
-    header {
-        width: 100vw;
-        height: 100vh;
-        // background: $dark;
-        background: linear-gradient(to top left, $primary 50%, $dark 50%);
+    background: $primary;
+    background: linear-gradient(to bottom right, $primary 50%, $dark 50%);
+    display: grid;
+    grid-template-columns: 150px auto 150px;
+    grid-template-rows: 150px auto 150px;
+}
 
-        .logo {
-            width: 100px;
-            padding: 15px;
-        }
+.logo {
+    width: 100%;
+    grid-column: 1/2;
+    
+}
 
-        .title {
-            text-transform: uppercase;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            color: $primary;
-            font-size: 73px;
-            font-weight: 900;
-
-            .left {
-                font-weight: 100;
-                transform: translateX(15%);
-            }
-            .right {
-                color: $dark;
-                transform: translateX(50%);
-            }
-
-            .sub_title {
-                width: 100vw;
-                position: absolute;
-                left: 50%;
-                top: 100%;
-                color: $light;
-                font-size: 25px;
-                font-weight: 300;
-
-
-            }
-        }
-    }
+.title-container {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: center;
+    display: flex;
+}
+.navbar {
+    grid-column: 1/4;
+    grid-row: 3/4;
 }
