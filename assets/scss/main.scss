@@ -1,6 +1,8 @@
 @import '_variables.scss';
 
 body {
+    width: 100vw;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     font-family: 'Jost', sans-serif;
@@ -27,11 +29,16 @@ body {
     display: grid;
     grid-template-columns: 150px auto 150px;
     grid-template-rows: 150px auto 150px;
+
+    @media screen and (max-width: 767px) {
+        background: linear-gradient(to right, $primary 50%, $dark 50%);
+    }
 }
 
 .logo {
     width: 100%;
     grid-column: 1/2;
+    padding: 15px;
     
 }
 
@@ -45,9 +52,20 @@ body {
     justify-content: center;
     align-items: center;
 
+    @media screen and (max-width: 767px) {
+        grid-column: 1/4;
+    }
+
     .title {
         font-size: 60px;
         font-weight: 900;
+
+        @media screen and (max-width: 1024px) {
+            font-size: 40px;
+        }
+        @media screen and (max-width: 767px) {
+            font-size: 20px;
+        }
     }
 
     .subtitle {
@@ -70,6 +88,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 767px) {
+        width: 100vh;
+        height: 100vh;
+        position: absolute;
+        left: 100vw;
+        flex-direction: column;
+        transition: all 0.2s linear;
+
+        background: linear-gradient(to right, $primary 50%, $dark 50%);
+
+    }
 
     .navbar__link {
         margin: 0px 15px 30px;
