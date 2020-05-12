@@ -33,13 +33,73 @@ body {
     @media screen and (max-width: 767px) {
         background: linear-gradient(to right, $primary 50%, $dark 50%);
     }
+
+    .logo {
+        width: 100%;
+        grid-column: 1/2;
+        padding: 15px;
+        
+    }
+
+
+
+label {
+    display: none;
+    position: fixed;
+    z-index: 9;
+    top: 30px;
+    right: 30px;
+    width: 35px;
+    height: 23px;
+
+    input {
+        display: none;
+
+        &:checked {
+            ~ .hamburger {
+                span {
+                    margin: 0;
+                    transition: all 0.2s linear;
+
+                    &:first-child {
+                        transform-origin: 75% 0%;
+                        transform: rotate(315deg);
+                    }
+
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+
+                    &:last-child {
+                        transform-origin: 75% 100%;
+                        transform: rotate(-315deg);
+                    }
+                }
+            }
+        }
+
+    }
+
+    @media screen and (max-width: 767px) {
+        display: block;
+    }
 }
 
-.logo {
-    width: 100%;
-    grid-column: 1/2;
-    padding: 15px;
-    
+.hamburger {
+    span {
+        display: block;
+        width: 100%;
+        height: 5px;
+        margin-bottom: 4px;
+        border-radius: 3px;
+
+        background: $primary;
+        transition: all 0.2s linear;
+
+        &:last-of-type {
+            margin-bottom: 0px;
+        }
+    }
 }
 
 .title-container {
@@ -87,17 +147,22 @@ body {
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 
     @media screen and (max-width: 767px) {
-        width: 100vh;
+        width: 100vw;
         height: 100vh;
-        position: absolute;
+        position: fixed;
+        top: 0px;
         left: 100vw;
         flex-direction: column;
         transition: all 0.2s linear;
 
         background: linear-gradient(to right, $primary 50%, $dark 50%);
+
+        &.active {
+            left: 0vw; 
+        }
 
     }
 
@@ -115,3 +180,5 @@ body {
 
     }
 }
+}
+
