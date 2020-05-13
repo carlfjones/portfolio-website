@@ -18,12 +18,20 @@ body {
   color: #171717;
 }
 
-.header {
+.section {
   height: 100vh;
   width: 100vw;
   background: #01d9ff;
   background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #01d9ff), color-stop(50%, #171717));
   background: linear-gradient(to bottom right, #01d9ff 50%, #171717 50%);
+}
+
+.section:nth-child(odd) {
+  background: -webkit-gradient(linear, right bottom, left top, color-stop(50%, #01d9ff), color-stop(50%, #171717));
+  background: linear-gradient(to top left, #01d9ff 50%, #171717 50%);
+}
+
+header {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 150px auto 150px;
@@ -33,13 +41,13 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .header {
+  header {
     background: -webkit-gradient(linear, left top, right top, color-stop(50%, #01d9ff), color-stop(50%, #171717));
     background: linear-gradient(to right, #01d9ff 50%, #171717 50%);
   }
 }
 
-.header .logo {
+header .logo {
   width: 100%;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -47,7 +55,7 @@ body {
   padding: 15px;
 }
 
-.header label {
+header label {
   display: none;
   position: fixed;
   z-index: 9;
@@ -57,28 +65,28 @@ body {
   height: 23px;
 }
 
-.header label input {
+header label input {
   display: none;
 }
 
-.header label input:checked ~ .hamburger span {
+header label input:checked ~ .hamburger span {
   margin: 0;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
-.header label input:checked ~ .hamburger span:first-child {
+header label input:checked ~ .hamburger span:first-child {
   -webkit-transform-origin: 75% 0%;
           transform-origin: 75% 0%;
   -webkit-transform: rotate(315deg);
           transform: rotate(315deg);
 }
 
-.header label input:checked ~ .hamburger span:nth-child(2) {
+header label input:checked ~ .hamburger span:nth-child(2) {
   opacity: 0;
 }
 
-.header label input:checked ~ .hamburger span:last-child {
+header label input:checked ~ .hamburger span:last-child {
   -webkit-transform-origin: 75% 100%;
           transform-origin: 75% 100%;
   -webkit-transform: rotate(-315deg);
@@ -86,12 +94,12 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .header label {
+  header label {
     display: block;
   }
 }
 
-.header .hamburger span {
+header .hamburger span {
   display: block;
   width: 100%;
   height: 5px;
@@ -102,11 +110,11 @@ body {
   transition: all 0.2s linear;
 }
 
-.header .hamburger span:last-of-type {
+header .hamburger span:last-of-type {
   margin-bottom: 0px;
 }
 
-.header .title-container {
+header .title-container {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
@@ -130,46 +138,46 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .header .title-container {
+  header .title-container {
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-column: 1/4;
   }
 }
 
-.header .title-container .title {
+header .title-container .title {
   font-size: 60px;
   font-weight: 900;
 }
 
 @media screen and (max-width: 1024px) {
-  .header .title-container .title {
+  header .title-container .title {
     font-size: 40px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .header .title-container .title {
+  header .title-container .title {
     font-size: 20px;
   }
 }
 
-.header .title-container .subtitle {
+header .title-container .subtitle {
   font-size: 15px;
   font-weight: 300;
 }
 
-.header .title-container .subtitle.dark {
+header .title-container .subtitle.dark {
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
 
-.header .title-container .subtitle.primary {
+header .title-container .subtitle.primary {
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
 
-.header .navbar {
+header .navbar {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1/4;
@@ -188,7 +196,7 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .header .navbar {
+  header .navbar {
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -203,19 +211,19 @@ body {
     background: -webkit-gradient(linear, left top, right top, color-stop(50%, #01d9ff), color-stop(50%, #171717));
     background: linear-gradient(to right, #01d9ff 50%, #171717 50%);
   }
-  .header .navbar.active {
+  header .navbar.active {
     left: 0vw;
   }
 }
 
-.header .navbar .navbar__link {
+header .navbar .navbar__link {
   margin: 0px 15px 30px;
   color: #F3f3f3;
   font-weight: 300;
   text-decoration: none;
 }
 
-.header .navbar .navbar__link:hover {
+header .navbar .navbar__link:hover {
   color: #01d9ff;
   border-bottom: 2px solid #01d9ff;
 }

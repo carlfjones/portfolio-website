@@ -20,12 +20,20 @@ body {
     color: $dark;
 }
 
-.header {
+.section {
     height: 100vh;
     width: 100vw;
 
     background: $primary;
     background: linear-gradient(to bottom right, $primary 50%, $dark 50%);
+
+    &:nth-child(odd) {
+        background: linear-gradient(to top left, $primary 50%, $dark 50%);
+    }
+}
+
+header {
+
     display: grid;
     grid-template-columns: 150px auto 150px;
     grid-template-rows: 150px auto 150px;

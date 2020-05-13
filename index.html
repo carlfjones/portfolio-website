@@ -8,7 +8,15 @@
     <link rel="stylesheet" href="assets/css/main.min.css">
 </head>
 <body>
-    <header class="header">
+
+    <nav class="navbar">
+        <a href="#about" class="navbar__link">About</a>
+        <a href="#" class="navbar__link">Projects</a>
+        <a href="#" class="navbar__link">Contact</a>
+        <a href="#" class="navbar__link">Blog</a>
+     </nav>
+
+    <header class="section">
         <img src="assets/logo/logo.png" alt="Arthur Carl Forest-Jones" class="logo">
 
         <label for="hamburger">
@@ -27,13 +35,18 @@
         </h1>
         <h2 class="subtitle primary">Web Developer</h2>
     </div>
-     <nav class="navbar">
-        <a href="#" class="navbar__link">About</a>
-        <a href="#" class="navbar__link">Projects</a>
-        <a href="#" class="navbar__link">Contact</a>
-        <a href="#" class="navbar__link">Blog</a>
-     </nav>
     </header>
+
+    <section class="section" id="about" data-color="light">
+        <h2 class="heading">About</h2>
+            <div class="about">
+                 <p>Hello. My name is <strong>Carl</strong>. I'm a <strong>developer</strong>
+                 from the <strong>UK</strong>, based in London. I design and develop 
+                 <strong>websites</strong> and <strong>apps</strong>, and in my spare time
+                 create and build <strong>games.</strong></p>
+                 </div>
+    </section>
+
     <script src="assets/js/main.js"></script>   
 </body>
 </html>
