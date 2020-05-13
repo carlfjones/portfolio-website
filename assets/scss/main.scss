@@ -31,22 +31,6 @@ body {
     align-items: flex-start;
     z-index: 9;
 
-    @media screen and (max-width: 767px) {
-        width: 100vw;
-        height: 100vh;
-        position: fixed;
-        top: 0px;
-        left: 100vw;
-        transition: all 0.2s linear;
-
-        background: linear-gradient(to right, $primary 50%, $dark 50%);
-
-        &.active {
-            left: 0vw; 
-        }
-
-    }
-
     .navbar__link {
         margin: 0px 15px 30px;
         color: $dark;
@@ -68,6 +52,38 @@ body {
         }
 
     }
+
+    @media screen and (max-width: 860px) {
+        left: 15px;
+
+        .navbar__link {
+            font-size: 24px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        left: 100vw;
+        align-items: flex-end;
+        justify-content: center;
+        transition: all 0.2s linear;
+
+        background: linear-gradient(to right, $primary 50%, $dark 50%);
+
+        &.active {
+            left: 0vw; 
+        }
+
+        .navbar__link {
+            color: $light;
+            font-size: 20px;
+        }
+
+    }
+
+
 }
 
 .section {
@@ -151,7 +167,7 @@ label {
         margin-bottom: 4px;
         border-radius: 3px;
 
-        background: $primary;
+        background: $light;
         transition: all 0.2s linear;
 
         &:last-of-type {
