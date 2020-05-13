@@ -61,15 +61,6 @@ body {
   border-bottom: 2px solid #F3f3f3;
 }
 
-@media screen and (max-width: 860px) {
-  .navbar {
-    left: 15px;
-  }
-  .navbar .navbar__link {
-    font-size: 24px;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .navbar {
     width: 100vw;
@@ -230,7 +221,7 @@ header .title-container .title {
 
 @media screen and (max-width: 1024px) {
   header .title-container .title {
-    font-size: 40px;
+    font-size: 38px;
   }
 }
 
